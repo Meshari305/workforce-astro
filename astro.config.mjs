@@ -7,3 +7,4 @@ export default defineConfig({
   adapter: vercel(),
   site: 'https://workforce.example' // update later to https://workforce.sa
 });
+ 
