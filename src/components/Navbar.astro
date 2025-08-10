@@ -1,0 +1,22 @@
+---
+const lang = Astro.props.lang ?? 'en';
+const isAR = lang === 'ar';
+---
+<header class="border-b border-gray-100 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+  <div class="container py-4 flex items-center justify-between">
+    <a href={isAR ? '/ar/' : '/'} class="flex items-center gap-3">
+      <img src="/favicon.svg" alt="Work Force" class="w-8 h-8" />
+      <span class="font-semibold">{isAR ? 'وورك فورس' : 'Work Force'}</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6">
+      <a href={isAR ? '/ar/#services' : '/#services'} class="hover:text-primary">{isAR ? 'خدماتنا' : 'Services'}</a>
+      <a href={isAR ? '/ar/#sectors' : '/#sectors'} class="hover:text-primary">{isAR ? 'القطاعات' : 'Sectors'}</a>
+      <a href={isAR ? '/ar/#about' : '/#about'} class="hover:text-primary">{isAR ? 'من نحن' : 'About'}</a>
+      <a href={isAR ? '/ar/#contact' : '/#contact'} class="hover:text-primary">{isAR ? 'تواصل' : 'Contact'}</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href={isAR ? '/' : '/ar/'} class="text-sm underline">{isAR ? 'English' : 'العربية'}</a>
+      <a href={isAR ? '/ar/#hire' : '/#hire'} class="btn btn-primary">{isAR ? 'طلب توظيف' : 'Hire Talent'}</a>
+    </div>
+  </div>
+</header>

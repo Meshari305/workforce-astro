@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  lang?: 'en' | 'ar';
+  url?: string;
+}
+const { title = 'Work Force — Staffing & Recruitment in Saudi Arabia', description = 'Premium staffing, recruitment, and GRO services for Saudi companies. Bilingual support (English/Arabic).', lang = 'en', url = 'https://workforce.example' } = Astro.props as Props;
+---
+<Fragment>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content="/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Work Force",
+    "url": url,
+    "logo": "/favicon.svg",
+    "sameAs": ["https://www.linkedin.com/company/workforce-company/"],
+    "description": description
+  })}</script>
+</Fragment>

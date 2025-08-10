@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+/* Smooth Arabic font rendering */
+[dir="rtl"] { font-family: theme('fontFamily.arabic'); }
+body { @apply bg-white text-wfInk; }
+.container { @apply max-w-6xl mx-auto px-4; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium shadow-sm hover:opacity-90 transition; }
+.btn-primary { @apply bg-wfBlue text-white; }
+.btn-outline { @apply border border-wfBlue text-wfBlue bg-transparent; }
+.card { @apply rounded-2xl border border-gray-200 p-6 shadow-sm bg-white; }

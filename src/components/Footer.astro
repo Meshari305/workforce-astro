@@ -1,0 +1,32 @@
+---
+const lang = Astro.props.lang ?? 'en';
+const isAR = lang === 'ar';
+---
+<footer class="mt-16 border-t border-gray-100">
+  <div class="container py-8 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <img src="/favicon.svg" alt="" class="w-8 h-8" />
+        <strong>Work Force</strong>
+      </div>
+      <p class="text-gray-600">{isAR ? 'مزود حلول توظيف وموارد بشرية في السعودية.' : 'Staffing & HR solutions in Saudi Arabia.'}</p>
+    </div>
+    <div>
+      <strong class="block mb-2">{isAR ? 'روابط' : 'Links'}</strong>
+      <ul class="space-y-1">
+        <li><a href={isAR ? '/ar/#services' : '/#services'}>{isAR ? 'خدماتنا' : 'Services'}</a></li>
+        <li><a href={isAR ? '/ar/#sectors' : '/#sectors'}>{isAR ? 'القطاعات' : 'Sectors'}</a></li>
+        <li><a href={isAR ? '/ar/#about' : '/#about'}>{isAR ? 'من نحن' : 'About'}</a></li>
+        <li><a href={isAR ? '/ar/#contact' : '/#contact'}>{isAR ? 'تواصل' : 'Contact'}</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong class="block mb-2">{isAR ? 'تواصل معنا' : 'Contact'}</strong>
+      <p class="text-gray-600">Riyadh, KSA<br/>info@workforce.sa</p>
+      <a class="inline-flex items-center gap-2 mt-2 underline" href="https://www.linkedin.com/company/workforce-company/" target="_blank" rel="noopener">
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-500 py-4">© {new Date().getFullYear()} Work Force</div>
+</footer>

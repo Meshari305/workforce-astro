@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'وورك فورس | التوظيف والاستقدام والخدمات الحكومية في السعودية';
+const description = 'حلول توظيف متميزة وخدمات GRO متوافقة مع قوى، مدد، التأمينات، مقيم، ونظام حماية الأجور.';
+---
+<BaseLayout {title} {description} lang="ar">
+  <section class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-semibold leading-tight">حلول التوظيف والاستقدام، بتنفيذ صحيح داخل السعودية</h1>
+    <p class="mt-4 text-gray-700 max-w-2xl mx-auto">ننشر القوى العاملة بسرعة وبشكل متوافق — من المتعاقدين المؤقتين إلى التوظيف الدائم — مع الالتزام بمنصات قوى ومدد والتأمينات ومقيم ونظام حماية الأجور.</p>
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <a href="#hire" class="btn btn-primary">طلب توظيف</a>
+      <a href="#cv" class="btn btn-outline">إرسال السيرة الذاتية</a>
+    </div>
+  </section>
+
+  <section id="kpis" class="grid md:grid-cols-4 gap-4 mb-14">
+    <div class="card text-center"><div class="text-3xl font-bold">+480</div><div class="text-gray-600">متعاقد تم نشرهم</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">+20</div><div class="text-gray-600">عميل تم خدمتهم</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">45<span class="text-base font-normal"> يوماً</span></div><div class="text-gray-600">متوسط مدة التوظيف</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">39</div><div class="text-gray-600">دولة تم الاستقطاب منها</div></div>
+  </section>
+
+  <section id="services" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">خدماتنا</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="card">
+        <h3 class="font-semibold mb-2">حلول التوظيف</h3>
+        <ul class="list-disc ps-5 text-gray-700 space-y-1">
+          <li>توظيف مؤقت ومتعاقدين</li>
+          <li>إدارة القوى العاملة في الموقع</li>
+          <li>الرواتب والالتزام بنظام حماية الأجور</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">الاستقدام والبحث التنفيذي</h3>
+        <ul class="list-disc ps-5 text-gray-700 space-y-1">
+          <li>توظيف بنظام النجاح أو التعاقد</li>
+          <li>توظيف السعوديين والوافدين</li>
+          <li>الاستقطاب الدولي والتنسيق</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">الخدمات الحكومية (GRO)</h3>
+        <ul class="list-disc ps-5 text-gray-700 space-y-1">
+          <li>قوى، مدد، التأمينات، مقيم</li>
+          <li>التأشيرات والإقامات</li>
+          <li>نصائح التوطين والامتثال</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectors" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">القطاعات</h2>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="card">الإنشاءات وإدارة المرافق</div>
+      <div class="card">التجزئة والتجارة الإلكترونية</div>
+      <div class="card">الخدمات المالية</div>
+      <div class="card">التقنية ومراكز الخدمات</div>
+    </div>
+  </section>
+
+  <section id="about" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">من نحن</h2>
+    <p class="text-gray-700">شركة سعودية مقرها الرياض تجمع بين خبرة محلية ووصول عالمي للمواهب. نعمل بانضباط امتثالي وتسعير شفاف ومستوى خدمة محدد باتفاقيات SLA.</p>
+  </section>
+
+  <section id="hire" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">طلب توظيف</h2>
+    <form class="card grid gap-3" name="hire" method="POST">
+      <input required name="company" placeholder="اسم الشركة" class="border rounded-xl px-3 py-2" />
+      <input required name="email" type="email" placeholder="البريد الإلكتروني" class="border rounded-xl px-3 py-2" />
+      <textarea name="needs" rows="4" placeholder="المسمى، العدد، تاريخ البدء" class="border rounded-xl px-3 py-2"></textarea>
+      <button class="btn btn-primary w-fit">إرسال</button>
+    </form>
+  </section>
+
+  <section id="cv" class="mb-20">
+    <h2 class="text-2xl font-semibold mb-4">إرسال السيرة الذاتية</h2>
+    <form class="card grid gap-3" name="cv" method="POST">
+      <input required name="name" placeholder="الاسم الكامل" class="border rounded-xl px-3 py-2" />
+      <input required name="email" type="email" placeholder="البريد الإلكتروني" class="border rounded-xl px-3 py-2" />
+      <input name="phone" placeholder="الجوال" class="border rounded-xl px-3 py-2" />
+      <input name="linkedin" placeholder="رابط لينكدإن" class="border rounded-xl px-3 py-2" />
+      <textarea name="summary" rows="4" placeholder="نبذة قصيرة" class="border rounded-xl px-3 py-2"></textarea>
+      <button class="btn btn-outline w-fit">إرسال عبر البريد</button>
+      <p class="text-xs text-gray-500">حالياً، أرسل سيرتك إلى <a class="underline" href="mailto:cv@workforce.sa">cv@workforce.sa</a>.</p>
+    </form>
+  </section>
+</BaseLayout>

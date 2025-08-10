@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Work Force | Staffing, Recruitment & GRO in Saudi Arabia';
+const description = 'Premium staffing, recruitment, and GRO services. Compliant with Qiwa, Mudad, GOSI, Muqeem, and WPS.';
+---
+<BaseLayout {title} {description} lang="en">
+  <section class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Staffing & Recruitment, done right in Saudi</h1>
+    <p class="mt-4 text-gray-700 max-w-2xl mx-auto">Deploy compliant workforce solutions fast — from contractors to permanent hires — aligned with Qiwa, Mudad, GOSI, Muqeem, and WPS.</p>
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <a href="#hire" class="btn btn-primary">Submit a Hiring Inquiry</a>
+      <a href="#cv" class="btn btn-outline">Submit Your CV</a>
+    </div>
+  </section>
+
+  <section id="kpis" class="grid md:grid-cols-4 gap-4 mb-14">
+    <div class="card text-center"><div class="text-3xl font-bold">480+</div><div class="text-gray-600">Contractors Deployed</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">20+</div><div class="text-gray-600">Clients Served</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">45<span class="text-base font-normal"> days</span></div><div class="text-gray-600">Avg. Time-to-Hire</div></div>
+    <div class="card text-center"><div class="text-3xl font-bold">39</div><div class="text-gray-600">Countries Sourced</div></div>
+  </section>
+
+  <section id="services" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">Services</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="card">
+        <h3 class="font-semibold mb-2">Staffing Solutions</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Contract & temp staffing</li>
+          <li>Onsite workforce management</li>
+          <li>Payroll & WPS compliance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">Recruitment & Headhunting</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Contingent & retained search</li>
+          <li>Saudi national & expat hiring</li>
+          <li>International sourcing & mobilization</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">GRO & Government Services</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Qiwa, Mudad, GOSI, Muqeem</li>
+          <li>Work visas & iqama processing</li>
+          <li>Saudization & compliance advisory</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectors" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">Sectors</h2>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="card">Construction & FM</div>
+      <div class="card">Retail & E‑commerce</div>
+      <div class="card">Financial Services</div>
+      <div class="card">Technology & BPO</div>
+    </div>
+  </section>
+
+  <section id="about" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">About Work Force</h2>
+    <p class="text-gray-700">Founded in Riyadh, we combine Saudi expertise with global talent access. We operate with disciplined compliance, transparent pricing, and SLA-driven delivery.</p>
+  </section>
+
+  <section id="hire" class="mb-16">
+    <h2 class="text-2xl font-semibold mb-4">Hiring Inquiry</h2>
+    <form class="card grid gap-3" name="hire" method="POST" data-netlify="false">
+      <input required name="company" placeholder="Company name" class="border rounded-xl px-3 py-2" />
+      <input required name="email" type="email" placeholder="Work email" class="border rounded-xl px-3 py-2" />
+      <textarea name="needs" rows="4" placeholder="Role(s), headcount, start date" class="border rounded-xl px-3 py-2"></textarea>
+      <button class="btn btn-primary w-fit">Send</button>
+    </form>
+  </section>
+
+  <section id="cv" class="mb-20">
+    <h2 class="text-2xl font-semibold mb-4">Submit Your CV</h2>
+    <form class="card grid gap-3" name="cv" method="POST">
+      <input required name="name" placeholder="Full name" class="border rounded-xl px-3 py-2" />
+      <input required name="email" type="email" placeholder="Email" class="border rounded-xl px-3 py-2" />
+      <input name="phone" placeholder="Phone" class="border rounded-xl px-3 py-2" />
+      <input name="linkedin" placeholder="LinkedIn URL" class="border rounded-xl px-3 py-2" />
+      <textarea name="summary" rows="4" placeholder="Brief profile" class="border rounded-xl px-3 py-2"></textarea>
+      <button class="btn btn-outline w-fit">Upload via email</button>
+      <p class="text-xs text-gray-500">For now, send your CV to <a class="underline" href="mailto:cv@workforce.sa">cv@workforce.sa</a>.</p>
+    </form>
+  </section>
+</BaseLayout>
