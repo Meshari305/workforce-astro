@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/static'; // ✅ static adapter
 
 export default defineConfig({
   integrations: [tailwind()],
-  output: 'static',
   adapter: vercel(),
-  site: 'https://workforce.example', // update after deploying
+  site: 'https://workforce.example' // update later to https://workforce.sa
 });
